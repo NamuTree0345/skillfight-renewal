@@ -5,6 +5,7 @@ import net.kyori.adventure.text.format.NamedTextColor
 import net.kyori.adventure.text.format.TextDecoration
 import org.bukkit.Material
 import org.bukkit.enchantments.Enchantment
+import xyz.namutree0345.skillFight.skill.SwordSkill
 import xyz.namutree0345.skillFight.util.StackUtil
 
 class Sworder : Job() {
@@ -24,6 +25,7 @@ class Sworder : Job() {
             }
             it
         })
+        this.skills.add(SwordSkill())
     }
 
 }

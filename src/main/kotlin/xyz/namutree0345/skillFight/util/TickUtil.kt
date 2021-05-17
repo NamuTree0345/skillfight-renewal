@@ -5,9 +5,13 @@ import xyz.namutree0345.skillFight.plugin
 
 object TickUtil {
 
-    fun runTaskBeforeTheTime(runnable: Runnable, repeatWhile: Long, repeatGangyuk: Long) {
-        val taskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(plugin, runnable, 0L, repeatGangyuk)
-        Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, { Bukkit.getScheduler().cancelTask(taskId) }, repeatWhile)
+    fun runTaskUntilTheTime(runnable: Runnable, repeatUntil: Long, repeatPer: Long) {
+        val taskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(plugin, runnable, 0L, repeatPer)
+        Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, { Bukkit.getScheduler().cancelTask(taskId) }, repeatUntil)
+    }
+
+    fun runTaskAfterTheTime(runnable: Runnable, time: Long) {
+        Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, runnable, time)
     }
 
 }

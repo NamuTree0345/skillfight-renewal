@@ -20,7 +20,7 @@ class MassArrowSkill : Skill() {
     }
 
     override fun activate(activatedBy: Player) {
-        TickUtil.runTaskBeforeTheTime({
+        TickUtil.runTaskUntilTheTime({
             val arrow = activatedBy.launchProjectile(Arrow::class.java)
             arrow.isGlowing = true
             arrow.velocity = activatedBy.location.direction.multiply(5)

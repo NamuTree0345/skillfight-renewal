@@ -21,7 +21,7 @@ class SkillGui {
                 println(i)
                 if(SkillFightPlugin.jobs.size - 1 >= i) {
                     val job = SkillFightPlugin.jobs[i]
-                    inv.setItem(att, StackUtil.getItemStack(job.icon, Component.text(job.name, NamedTextColor.AQUA, TextDecoration.BOLD)))
+                    inv.setItem(att, StackUtil.getItemStack(job.icon, Component.text(job.name, NamedTextColor.AQUA, TextDecoration.BOLD), Component.text(job.desc, NamedTextColor.WHITE)))
                     att += 2
                 }
             }
