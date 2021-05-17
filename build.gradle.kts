@@ -1,7 +1,7 @@
 import kr.entree.spigradle.kotlin.paper
 
 plugins {
-    kotlin("jvm") version "1.4.10"
+    kotlin("jvm") version "1.5.0"
     id("kr.entree.spigradle") version "2.2.3"
 }
 
@@ -17,6 +17,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
+    implementation("com.github.monun:kommand:0.10.0")
     compileOnly("com.destroystokyo.paper:paper-api:1.16.5-R0.1-SNAPSHOT")
     compileOnly("com.github.spigradle.spigradle:kr.entree.spigradle.base.gradle.plugin:v2.2.3")
     compileOnly(paper("1.16.5"))
@@ -24,11 +25,13 @@ dependencies {
 }
 
 spigot {
-    authors = listOf("명이")
+    authors = listOf("NamuTree0345")
     apiVersion = project.property("apiVersion").toString()
     //depends = listOf("ProtocolLib")
     commands {
-        //create("hello")
+        create("map")
+        create("cc")
+        create("start")
     }
 }
 
@@ -64,7 +67,9 @@ tasks {
     // From monun/tap-sample-plugin
     create<Copy>("copyToServer") {
         from(jar)
-        val plugins = File(rootDir, ".server/plugins")
+        // changed to my playground server
+        val plugins = File("/home/namutree0345/바탕화면/놀이터/plugins")
+        //val plugins = File(rootDir, ".server/plugins")
         if (File(shade.artifacts.files.asPath).exists()) {
             into(File(plugins, "update"))
         } else {
