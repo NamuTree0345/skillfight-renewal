@@ -17,7 +17,7 @@ class Healer : Job() {
     init {
         this.name = "힐러"
         this.desc = "회복 장인"
-        this.icon = Material.DIAMOND_SWORD
+        this.icon = Material.POTION
         this.items.add(StackUtil.getItemStack(Material.SPLASH_POTION, Component.text("???", NamedTextColor.DARK_PURPLE)).let {
             it.itemMeta = (it.itemMeta as PotionMeta).let { im ->
                 im.addCustomEffect(PotionEffect(PotionEffectType.REGENERATION, 1200, 3), true)
