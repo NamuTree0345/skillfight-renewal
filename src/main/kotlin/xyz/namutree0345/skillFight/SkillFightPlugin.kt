@@ -34,6 +34,7 @@ class SkillFightPlugin : JavaPlugin() {
         jobs.add(Sworder())
         jobs.add(Healer())
         jobs.add(Ninja())
+        jobs.add(Magicer())
     }
 
 }

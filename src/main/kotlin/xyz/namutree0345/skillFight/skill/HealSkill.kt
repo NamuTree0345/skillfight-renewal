@@ -59,7 +59,7 @@ class HealSkill : Skill() {
             )
         )
         TickUtil.runTaskUntilTheTime({
-            (e as Player).addPotionEffect(PotionEffect(PotionEffectType.REGENERATION, 20, 20))
+            (e as Player).addPotionEffect(PotionEffect(PotionEffectType.REGENERATION, 20, 2))
         }, 400, 20)
     }
 }
