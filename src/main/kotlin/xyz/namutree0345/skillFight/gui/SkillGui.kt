@@ -17,7 +17,7 @@ class SkillGui {
             val inv = Bukkit.createInventory(null, 9, Component.text("직업 선택", NamedTextColor.GREEN, TextDecoration.BOLD))
             // 1, 3, 5, 7
             var att = 1
-            for(i in (page * 4)..(SkillFightPlugin.jobs.size + (page * 4))) {
+            for(i in (page * 4)..(page * 3 + 3)) {
                 println(i)
                 if(SkillFightPlugin.jobs.size - 1 >= i) {
                     val job = SkillFightPlugin.jobs[i]
