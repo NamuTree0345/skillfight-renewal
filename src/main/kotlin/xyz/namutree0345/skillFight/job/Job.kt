@@ -8,7 +8,7 @@ abstract class Job {
 
     val skills = arrayListOf<Skill>()
 
-    val items = arrayListOf<ItemStack>()
+    val items = arrayListOf<ItemStack>(ItemStack(Material.WATER_BUCKET), ItemStack(Material.LAVA_BUCKET), ItemStack(Material.FLINT_AND_STEEL))
 
     var offhandItem = ItemStack(Material.AIR)
 
