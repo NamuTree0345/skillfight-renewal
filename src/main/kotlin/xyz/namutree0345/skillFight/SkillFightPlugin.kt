@@ -4,6 +4,7 @@ import com.github.monun.kommand.kommand
 import org.bukkit.plugin.java.JavaPlugin
 import xyz.namutree0345.skillFight.commands.CommandMap
 import xyz.namutree0345.skillFight.commands.CommandSkill
+import xyz.namutree0345.skillFight.commands.CommandStart
 import xyz.namutree0345.skillFight.job.*
 import xyz.namutree0345.skillFight.listener.JobSelectorFeature
 import xyz.namutree0345.skillFight.listener.NinjaSpecial
@@ -24,6 +25,7 @@ class SkillFightPlugin : JavaPlugin() {
         kommand {
             CommandMap.register(this)
             CommandSkill.register(this)
+            CommandStart.register(this)
         }
         server.pluginManager.apply {
             this.registerEvents(SkillBaldong(), this@SkillFightPlugin)
